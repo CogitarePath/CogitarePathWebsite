@@ -11,13 +11,14 @@
     left: 0%;
     right: 0%;
     margin-top: 2%;
+    padding: 5px;
     align-self: center;
 
     width: 95%;
     position: fixed;
     height: 60px;
 
-    background-color: black;
+    background-color: rgb(255, 255, 255, 0.05);
     border-radius: 25px;
 
     display: flex;
@@ -122,4 +123,43 @@
 
 #mission{
     border-color: #F67421;
+}
+
+#areaLancamentos{
+    padding: 70px;
+    padding-right: 40px;
+    position: relative;
+}
+
+#tituloLancamentos{
+    font-size: 80px;
+}
+
+#textoLancamentos{
+    width: 50%;
+}
+
+#descricaoLancamentos{
+    font-family: 'Inter';
+    text-align: left;
+    line-height: 100%;
+    margin-top: 30px;
+    font-size: 45px;
+
+}
+
+#secaoImagens{
+    top: 0;
+    width: 50%;
+    position:absolute;
+    right: 40px;
+}
+
+.lancamentosImagens{
+    background-color: #05002B;
+}
+
+#img1{
+    width: 363px;
+    height: 531px;
 }
