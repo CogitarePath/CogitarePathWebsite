@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#header{
+    margin: auto;
+    top: 0%;
+
+    left: 0%;
+    right: 0%;
+    margin-top: 2%;
+    padding: 5px;
+    align-self: center;
+
+    width: 95%;
+    position:absolute;
+    height: 60px;
+
+    background-color: rgb(255, 255, 255, 0.05);
+    border-radius: 25px;
+
+    display: flex;
+    align-items: center;
+}
+
+#img1{
+    width: 363px;
+    height: 531px;
+}
+
+#colorOverlay{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#businessName{
+    margin-left: 20px;
+    font-size: 40px;
+}
+
+#mission{
+    border-color: #F67421;
+}
+
+#vision{
+    border-color: #B62797;
+}
+
+#values{
+    border-color: #72FFD1;
+}
+
+#areaLancamentos{
+    padding: 70px;
+    padding-right: 40px;
+    position: relative;
+}
+
+#tituloLancamentos{
+    font-size: 80px;
+}
+
+#textoLancamentos{
+    width: 50%;
+}
+
+#descricaoLancamentos{
+    font-family: 'Inter';
+    text-align: left;
+    line-height: 100%;
+    margin-top: 30px;
+    font-size: 45px;
+
+}
+
+#secaoImagens{
+    top: 0;
+    width: 50%;
+    position:absolute;
+    right: 40px;
+}
+
+#gameName{
+    font-size: 55px;
+    margin-bottom: 4%;
+    font-family: 'montserrat', serif;;
+}
+
+#gameDesc{
+    font-size: 35px;
+}
+
+#MVVBackground{
+    background-color: #03001A;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#slogan{
+    color: white;
+    position: relative;
+    top: 100px;
+    font-size: 60px;
+}
+
+#MVVSection{
+    position: relative;
+    top:200px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.rightSideText{
+    height: auto;
+    margin-left: auto; 
+}
+
+.rightSideText > p {
+    font-size: 30px;
+    margin-right: 45px;
+}
+
+.topBackground{
+
+    width:100%;
+    height: 100vh;
+
+    background-image:url(../img/FundoPrincipal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gameInfo{
+    position: relative;
+    top: 58vh;
+    margin-left: 5%;
+    max-width: 50%;
+    color: white;
+}
+
+.MVVTitle{
+    background-color: #05002B;
+    color: white;
+    font-size: 40px;
+    margin-left: 2%;
+    margin-right: 2%;
+    max-width: 20%;
+
+    border-radius: 12px;
+    border: 1px solid;
+
+    padding: 25px;
+}
+
+.MVVTitle p{
+    margin-top: 15px;
+}
+
+
+.MVVDescription{
+    font-size: 30px;
+    font-family: Helvetica;
+}
+
+
+
+.headerText{
+
+    display: inline;
+
+    color: white;
+}
+
+.lancamentosImagens{
+    background-color: #05002B;
+}
+
+
