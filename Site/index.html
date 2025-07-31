@@ -12,14 +12,14 @@
     <header id="header">
         <h2 class="headerText" id="businessName">Cogitare Path</h2>
         <div class="rightSideText">
-            <a class="headerText" href="">Home</a>
-            <a class="headerText" href="">Sobre</a>
-            <a class="headerText" href="">Lançamentos</a>
-            <a class="headerText" href="">Time</a>
-            <a class="headerText" href="">Fale Conosco</a>
+            <a class="headerText" href="#home">Home</a>
+            <a class="headerText" href="#sobre">Sobre</a>
+            <a class="headerText" href="#lancamentos">Lançamentos</a>
+            <a class="headerText" href="#equipe">Time</a>
+            <a class="headerText" href="#faleConosco">Fale Conosco</a>
         </div>
     </header>
-    <div class="topBackground">
+    <div class="topBackground" id="home">
         <div id="colorOverlay">
             <div class="gameInfo">
                 <p id="gameName">A.G.I.R.O.</p>
@@ -30,7 +30,7 @@
         </div>
     </div>
 
-    <section id="MVVBackground">
+    <section class="MVVBackground" id="sobre">
         <div id="slogan">Pensar diferente é superar o impossível</div>
 
         <div id="MVVSection">
@@ -52,27 +52,117 @@
 
     </section>
 
-    <div id="areaLancamentos">
-        <div id="textoLancamentos">
-            <p id="tituloLancamentos">Lançamentos</p>
-            <p id="descricaoLancamentos">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula
-                dolor sit amet lacus faucibus dictum. Morbi congue dignissim ligula, in gravida metus euismod.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula dolor sit amet lacus
-                faucibus dictum. Morbi congue dignissim ligula, in gravida metus euismod
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula dolor sit amet lacus
-                faucibus dictum. Morbi congue dignissim ligula, in gravida metus euismod
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula dolor sit amet lacus
-                faucibus dictum. Morbi congue dignissim ligula, in gravida metus euismod
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
+    <section class="areaLancamentos" id="lancamentos">
 
-        <div id="secaoImagens">
-            <div id="img1" class="lancamentosImagens">a</div>
-            <div id="img2" class="lancamentosImagens"></div>
-            <div id="img3" class="lancamentosImagens"></div>
-            <div id="img4" class="lancamentosImagens"></div>
+        <div class="circle" id="laranja"></div>
+        <div class="circle" id="azul"></div>
+        <div class="circle" id="roxo"></div>
+        <div id="rosa"></div>
+        <div id="fundo">
+            <div id="textoLancamentos">
+                <p class="titulo">Lançamentos</p>
+                <p id="descricaoLancamentos">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula
+                    dolor sit amet lacus faucibus dictum. Morbi congue dignissim ligula, in gravida metus euismod.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula dolor sit amet lacus
+                    faucibus dictum. Morbi congue dignissim ligula, in gravida metus euismod
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula dolor sit amet lacus
+                    faucibus dictum. Morbi congue dignissim ligula, in gravida metus euismod
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula dolor sit amet lacus
+                    faucibus dictum. Morbi congue dignissim ligula, in gravida metus euismod
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <div id="secaoImagens">
+                <div id="img1" class="lancamentosImagens"></div>
+                <div id="img2" class="lancamentosImagens"></div>
+                <div id="img3" class="lancamentosImagens"></div>
+                <div id="img4" class="lancamentosImagens"></div>
+            </div>
         </div>
-    </div>
+    </section>
+
+
+    <section id="equipe">
+        <p class="titulo">Nossa equipe</p>
+        <div id="lista">
+            <div class="membros">
+                <img src="img/Daniel.png" alt="" class="imgMembro">
+                <p class="nome">Daniel Carvalho</p>
+            </div>
+
+            <div class="membros">
+                <img src="img/Christian.png" alt="" class="imgMembro">
+                <p class="nome">Christian Varandas</p>
+            </div>
+            <div class="membros">
+                <img src="img/Alex.png" alt="" class="imgMembro">
+                <p class="nome">Alex C. de Oliveira</p>
+            </div>
+            <div class="membros">
+                <img src="img/Guilherme.png" alt="" class="imgMembro">
+                <p class="nome">Guilherme H.</p>
+            </div>
+            <div class="membros">
+                <img src="img/MariaEduarda.png" alt="" class="imgMembro">
+                <p class="nome">Maria Eduarda</p>
+            </div>
+
+            <div class="membros">
+                <img src="img/GabrielGaudi.png" alt="" class="imgMembro">
+                <p class="nome">Gabriel Gaudí</p>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div id="faleConosco">
+            <h1 id="faletext">Fale <br /> Conosco</h1>
+            <hr>
+            <table id="faleSpace">
+                <tr>
+                    <td>
+                        <img src="img/local.png" alt="localização" class="iconFale">
+                    </td>
+                    <td>
+                        <h3 class="subtitle">Cogitare Path</h3>
+                        <p class="description">Rua Harmonia, 77 - São Paulo - SP</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/email.png" alt="localização" class="iconFale">
+                    </td>
+                    <td>
+                        <h3 class="subtitle">E-mail</h3>
+                        <p class="description">contato.cogitarepath@gmail.com</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/telefone.png" alt="localização" class="iconFale">
+                    </td>
+                    <td>
+                        <h3 class="subtitle">Telefone</h3>
+                        <p class="description">(11) 3429-7174</p>
+                    </td>
+                </tr>
+            </table>
+            <h2 id="socialText">Redes Sociais</h2>
+            <a href=""><img src="img/insta.png" alt="" class="icon"></a>
+            <a href=""><img src="img/envelope.png" alt="" class="icon"></a>
+
+        </div>
+        <form id="formCont">
+            <div id="align">
+                <p class="textForm">Nome</p>
+                <input type="text" name="nome" class="boxStyle" id="nome" placeholder="Digite seu nome">
+                <p class="textForm">E-mail</p>
+                <input type="email" name="email" class="boxStyle" id="email" placeholder="Digite seu E-mail">
+                <p class="textForm">Mensagem</p>
+                <textarea name="descrição" class="boxStyle" id="mensagem" placeholder="Digite sua Mensagem"></textarea>
+                <input type="button" value="Enviar" id="buttonStyle">
+            </div>
+        </form>
+    </footer>
 
 </body>
 
