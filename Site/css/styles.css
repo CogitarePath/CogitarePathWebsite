@@ -21,6 +21,10 @@
     font-weight: 300;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--bg-color);
 }
@@ -52,10 +56,7 @@ hr {
     align-items: center;
 }
 
-#img1 {
-    width: 363px;
-    height: 531px;
-}
+
 
 #colorOverlay {
     height: 100%;
@@ -119,6 +120,8 @@ hr {
     backdrop-filter: blur(250px);
     padding: 70px;
     padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
 }
 
 #textoLancamentos {
@@ -134,10 +137,41 @@ hr {
 
 
 #secaoImagens {
-    top: 0;
-    /* width: 50%; */
-    position: absolute;
-    right: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 50vw;
+    height: 100%;
+    gap: 1.6vh;
+}
+
+#img1 {
+    width: 25vw;
+    height: 50vh;
+}
+
+#img2 {
+    width: auto;
+    height: 24vh;
+}
+
+#img3 {
+    width: auto;
+    height: 24vh;
+}
+
+#img4 {
+    width: 100%;
+    height: 40vh;
+}
+
+#imgContainer {
+    margin: 0;
+    width: 24vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6vh;
 }
 
 /*Area lancamentos*/
@@ -157,8 +191,22 @@ hr {
     border-color: var(--bg-blue);
 }
 
-
-
+#line {
+    left: 0;
+    top:-13px;
+    position: absolute;
+    width: 155px;
+    height: 300.35px;
+    /* z-index: -1; */
+}
+#line2 {
+    z-index: -1;
+    left: -10px;
+    top:0px;
+    position: absolute;
+    width: 155px;
+    height: 275px;
+}
 #slogan {
     position: relative;
     top: 100px;
@@ -194,21 +242,24 @@ hr {
 
 /*footer*/
 #footer {
+    margin-top: 10vh;
     height: 100vh;
     margin-bottom: 0px;
     padding: 0;
-    position: relative;
+    display: flex;
 }
 
 #faleConosco {
     margin: 70px;
-    margin-top: 100px;
+    margin-top: 150px;
     width: 50vw;
 }
+
 #faleSpace {
     border-collapse: separate;
-    border-spacing: 20px 50px;  
+    border-spacing: 20px 50px;
 }
+
 #faletext {
     margin-top: 20px;
     font-size: 100px;
@@ -221,35 +272,34 @@ hr {
     margin: 1vh 0 1vh 0;
 }
 
-#formCont{
-    position:absolute;
-    top: 25px;
-    right: 4vw;
+#formCont {
+    margin: 10vh 5vw 0 0;
     width: 40vw;
-    height: 90%;
+    height: 80%;
     backdrop-filter: blur(250px);
-    background-color:  #110E27;
+    background-color: #110E27;
     border-radius: 25px;
     border: #DE574D 5px solid;
 }
 
-#align{
-    margin:10%;
-    display:grid;
-    position: relative;
+#align {
+    margin: 10%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
 }
 
-#nome{
+#nome {
     height: 72px;
     margin-bottom: 5%;
 }
 
-#email{
+#email {
     height: 72px;
     margin-bottom: 5%;
 }
 
-#mensagem{
+#mensagem {
     height: 312px;
     vertical-align: top;
     resize: none;
@@ -257,17 +307,17 @@ hr {
 }
 
 
-#buttonStyle{
+#buttonStyle {
     background-color: #DE574D;
     height: 40px;
     width: 201px;
     border: none;
     border-radius: 15px;
-    position:absolute;
-    right: 0;
-    bottom: -10%;
     font-size: 20px;
+    align-self: self-end;
+    margin-top: 8%;
 }
+
 /*footer*/
 
 /*Header classes*/
@@ -322,17 +372,29 @@ hr {
     border-radius: 25px;
     border: 2px solid;
 
-    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
 }
 
 .MVVTitle p {
     margin-top: 20px;
 }
 
+.MVVType {
+    font-size: 50px;
+    font-weight: var(--font-title-weight);
+    font-family: "Libre Baskerville", serif;
+}
 
 .MVVDescription {
     font-size: 30px;
-    font-family: Helvetica;
+    font-family: Montserrat, serif;
+    font-weight: 200;
+    width: 70%;
+    text-align: justify;
+    hyphens: auto;
 }
 
 /*mvv classes*/
@@ -342,6 +404,7 @@ hr {
     text-decoration: none;
     font-size: 35px;
     padding-right: 35px;
+
 }
 
 
@@ -388,6 +451,7 @@ hr {
 .nome {
     font-size: 40px;
     font-weight: var(--font-title-weight);
+    text-align: center;
 }
 
 /*membros classes*/
@@ -420,7 +484,7 @@ hr {
     font-weight: 300;
 }
 
-.boxStyle{
+.boxStyle {
     background-color: #232036;
     border: none;
     border-radius: 25px;
