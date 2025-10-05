@@ -4,28 +4,40 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cogitare</title>
+    <title>Cogitare Path</title>
     <link href="css/styles.css" rel="stylesheet">
+    <link rel="icon" href="img/leleocabeca.png" type="image/x-icon">
 </head>
 
 <body>
-    <header id="header">
-        <h2 class="headerText" id="businessName">Cogitare Path</h2>
+    <header class="header">
+        <div id="menu-line">
+            <h2 class="headerText" id="businessName">Cogitare Path</h2>
+            <input type="checkbox" id="menu-button">
+            <label for="menu-button" class="menu">
+                <div class="linha"></div>
+                <div class="linha"></div>
+                <div class="linha"></div>
+            </label>
+        </div>
         <div class="rightSideText">
             <a class="headerText" href="#home">Home</a>
             <a class="headerText" href="#sobre">Sobre</a>
             <a class="headerText" href="#lancamentos">Lançamentos</a>
             <a class="headerText" href="#equipe">Time</a>
-            <a class="headerText" href="#faleConosco">Fale Conosco</a>
+            <a class="headerText" href="#footer">Fale Conosco</a>
         </div>
     </header>
     <div class="topBackground" id="home">
         <div id="colorOverlay">
             <div class="gameInfo">
-                <p id="gameName">A.G.I.R.O.</p>
+                <p id="gameName">Projeto A.G.I.R.O.</p>
 
-                <p id="gameDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque accumsan rhoncus
-                    eros, malesuada placerat elit placerat ut.</p>
+                <p id="gameDesc">Luiza Koga viveu seus 22 anos de vida em um bunker, escondida de um perigo
+                    desconhecido. Após se tornar a única restante ali, se vê obrigada a sair e se arriscar na
+                    superfície, um mundo devastado por uma espécie de lodo preto misterioso. Explore a superfície,
+                    descubra o que aconteceu com a cidade de Boa Saudade e encontre uma saída. E o mais importante, não
+                    deixe que as ameaças te levem à insanidade.</p>
             </div>
         </div>
     </div>
@@ -55,7 +67,8 @@
 
     </section>
 
-    <section class="areaLancamentos" id="lancamentos">
+    <div id="lancamentos"></div>
+    <section class="areaLancamentos">
 
         <div class="circle" id="laranja"></div>
         <div class="circle" id="azul"></div>
@@ -64,22 +77,33 @@
         <div id="fundo">
             <div id="textoLancamentos">
                 <p class="titulo">Lançamentos</p>
-                <p id="descricaoLancamentos">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula
-                    dolor sit amet lacus faucibus dictum. Morbi congue dignissim ligula, in gravida metus euismod.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula dolor sit amet lacus
-                    faucibus dictum. Morbi congue dignissim ligula, in gravida metus euismod
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula dolor sit amet lacus
-                    faucibus dictum. Morbi congue dignissim ligula, in gravida metus euismod
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula dolor sit amet lacus
-                    faucibus dictum. Morbi congue dignissim ligula, in gravida metus euismod
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="align-center">
+                    <p class="nomeLanc">Projeto  A.G.I.R.O.</p>
+                    <p id="descricaoLancamentos">Luiza Koga viveu seus 22 anos de vida em um bunker, escondida de um
+                        perigo
+                        desconhecido. Após se tornar a única restante ali, se vê obrigada a sair e se arriscar na
+                        superfície, se deparando com um mundo devastado por uma espécie de lodo preto.
+                        Fazem 25 anos desde o dia em que essa substância destruiu, deprimiu e transformou o mundo em um
+                        cenário de uma tragédia. Este dia, conhecido como “O dia da Queda”, foi resultado de um
+                        experimento
+                        científico falho, da vontade de entender algo do qual não queria ser compreendido.
+                        Presa na cidade de Boa Saudade, local de origem e o centro do problema, Luiza precisa descobrir
+                        a
+                        verdade por trás disso tudo e fugir com vida. Enfrentando em sua jornada, criaturas originadas a
+                        partir do lodo, formadas principalmente pelo medo de suas vítimas.
+                        Explore a superfície, descubra o que aconteceu com a cidade de Boa Saudade e encontre uma saída.
+                        E o
+                        mais importante, não deixe que as ameaças te levem à insanidade.</p>
+                </div>
             </div>
 
             <div id="secaoImagens">
-                <div id="img1" class="lancamentosImagens"></div>
-                <div id="imgContainer">
-                    <div id="img2" class="lancamentosImagens"></div>
-                    <div id="img3" class="lancamentosImagens"></div>
+                <div id="img-align">
+                    <div id="img1" class="lancamentosImagens"></div>
+                    <div id="imgContainer">
+                        <div id="img2" class="lancamentosImagens"></div>
+                        <div id="img3" class="lancamentosImagens"></div>
+                    </div>
                 </div>
                 <div id="img4" class="lancamentosImagens"></div>
             </div>
@@ -120,7 +144,7 @@
     </section>
     <footer id="footer">
         <div id="faleConosco">
-            <h1 id="faletext">Fale <br/> Conosco</h1>
+            <h1 id="faletext">Fale Conosco</h1>
             <hr>
             <table id="faleSpace">
                 <tr>
@@ -152,7 +176,7 @@
                 </tr>
             </table>
             <h2 id="socialText">Redes Sociais</h2>
-            <a href=""><img src="img/insta.png" alt="" class="icon"></a>
+            <a href="https://www.instagram.com/cogitarepath/"><img src="img/insta.png" alt="" class="icon"></a>
             <a href=""><img src="img/envelope.png" alt="" class="icon"></a>
 
         </div>
@@ -168,6 +192,8 @@
             </div>
         </form>
     </footer>
+    <script src="js/script.js"></script>
+    <script src="js/menuScript.js"></script>
 
 </body>
 

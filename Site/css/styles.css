@@ -7,6 +7,8 @@
     --bg-blue: #72FFD1;
     --bg-pink: #B62797;
     --bg-orange: #F67421;
+    --header-color: rgb(255, 255, 255, 0.05);
+    ;
 
     --text-color: #fff;
 
@@ -21,23 +23,24 @@
     font-weight: 300;
 }
 
-html {  
+html {
     scroll-behavior: smooth;
 }
 
 body {
     background-color: var(--bg-color);
+    overflow-x: hidden;
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
     width: 4px;
 }
 
-body::-webkit-scrollbar-track{
-    background-color:var(--bg-color)
+body::-webkit-scrollbar-track {
+    background-color: var(--bg-color)
 }
 
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
     background-color: rgba(97, 97, 97, 0.322)
 }
 
@@ -47,9 +50,18 @@ hr {
     width: 80%;
 }
 
-#header {
+section[id] {
+    scroll-margin-top: 10vh;
+}
+
+#lancamentos{
+    scroll-margin-top:10vh;
+}
+
+/*Header*/
+.header {
     margin: auto;
-    top: 0%;
+    top: 0;
 
     left: 0%;
     right: 0%;
@@ -57,40 +69,189 @@ hr {
     padding: 5px;
     align-self: center;
 
-    width: 95%;
-    position: absolute;
-    height: 60px;
+    width: 95vw;
+    position: fixed;
+    height: 9vh;
+    z-index: 100;
 
-    background-color: rgb(255, 255, 255, 0.05);
+    background-color: var(--header-color);
     border-radius: 25px;
 
     display: flex;
     align-items: center;
+    transition: 500ms;
 }
 
 
+#businessName {
+    margin-left: 20px;
+    font-size: 2vw;
+    font-weight: var(--font-title-weight);
+}
 
+#menu-button {
+    display: none;
+}
+
+.rightSideText {
+    height: auto;
+    margin-left: auto;
+}
+
+.rightSideText>a {
+
+    margin-right: 1vw;
+}
+
+.headerText {
+    display: inline;
+    text-decoration: none;
+    font-size: 2vw;
+    padding-right: 35px;
+
+}
+
+.menu {
+    display: none;
+}
+
+/*Header*/
+
+
+
+
+
+/*home*/
 #colorOverlay {
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-#businessName {
-    margin-left: 20px;
-    font-size: 40px;
-}
-
 #gameName {
-    font-size: 55px;
+    font-size: 3vw;
     margin-bottom: 4%;
     font-family: "Libre Baskerville", serif;
     font-weight: var(--font-title-weight);
 }
 
 #gameDesc {
-    font-size: 35px;
+    font-size: 1.5vw;
 }
+
+.topBackground {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/FundoPrincipal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gameInfo {
+    position: relative;
+    top: 50vh;
+    margin-left: 5%;
+    max-width: 55%;
+}
+
+/*home*/
+
+
+
+/*missão, visão, valores*/
+#mission {
+    border-color: var(--bg-orange);
+}
+
+#vision {
+    border-color: var(--bg-purple);
+}
+
+#values {
+    border-color: var(--bg-blue);
+}
+
+#line {
+    left: 0;
+    top: -13px;
+    position: absolute;
+    width: 155px;
+    height: 300px;
+    /* z-index: -1; */
+}
+
+#line2 {
+    z-index: -1;
+    left: -10px;
+    top: 0px;
+    position: absolute;
+    width: 155px;
+    height: 275px;
+}
+
+#slogan {
+    position: relative;
+    top: 100px;
+    font-size: 4vw;
+    font-weight: var(--font-title-weight);
+}
+
+#MVVSection {
+    position: relative;
+    top: 31vh;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.MVVBackground {
+    position: relative;
+    width: 100%;
+    height: 110vh;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.MVVTitle {
+    background-color: var(--bg-color-box);
+    font-size: 2vw;
+    margin-left: 2%;
+    margin-right: 2%;
+    max-width: 25%;
+    height: 45vh;
+    font-weight: var(--font-title-weight);
+
+    border-radius: 25px;
+    border: 2px solid;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.MVVTitle p {
+    margin-top: 20px;
+}
+
+.MVVType {
+    font-size: 2.5vw;
+    font-weight: var(--font-title-weight);
+    font-family: "Libre Baskerville", serif;
+}
+
+.MVVDescription {
+    font-size: 1.5vw;
+    font-family: Montserrat, serif;
+    font-weight: 200;
+    width: 70%;
+    text-align: justify;
+    hyphens: auto;
+}
+
+/*missão, visão, valores*/
+
 
 
 /*Area lancamentos*/
@@ -130,10 +291,12 @@ hr {
     position: absolute;
     min-height: 100%;
     backdrop-filter: blur(250px);
-    padding: 70px;
-    padding-right: 40px;
+    width: 100%;
+    /* padding: 40px; */
+    padding-top: 70px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    gap: 20px;
 }
 
 #textoLancamentos {
@@ -143,8 +306,7 @@ hr {
 #descricaoLancamentos {
     text-align: left;
     line-height: 120%;
-    margin-top: 40px;
-    font-size: 1.8vw;
+    font-size: 1.5vw;
 }
 
 
@@ -153,7 +315,7 @@ hr {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    width: 50vw;
+    width: 40vw;
     height: 100%;
     gap: 1.5vh;
 }
@@ -180,251 +342,30 @@ hr {
 
 #imgContainer {
     margin: 0;
-    width: 24vw;
+    width: 23vw;
     display: flex;
     flex-direction: column;
     gap: 1.5vh;
 }
 
-/*Area lancamentos*/
-
-
-
-/*missão, visão, valores*/
-#mission {
-    border-color: var(--bg-orange);
-}
-
-#vision {
-    border-color: var(--bg-purple);
-}
-
-#values {
-    border-color: var(--bg-blue);
-}
-
-#line {
-    left: 0;
-    top:-13px;
-    position: absolute;
-    width: 155px;
-    height: 300.35px;
-    /* z-index: -1; */
-}
-#line2 {
-    z-index: -1;
-    left: -10px;
-    top:0px;
-    position: absolute;
-    width: 155px;
-    height: 275px;
-}
-#slogan {
-    position: relative;
-    top: 100px;
-    font-size: 80px;
-    font-weight: var(--font-title-weight);
-}
-
-#MVVSection {
-    position: relative;
-    top: 300px;
+#img-align {
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: row;
-    justify-content: space-around;
-}
-
-/*missão, visão, valores*/
-
-/*membros*/
-#equipe {
-    margin: 70px;
-    height: 100vh;
-}
-
-#lista {
-    display: grid;
-    margin-top: 8vh;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 15vh;
-}
-
-/*membros*/
-
-/*footer*/
-#footer {
-    margin-top: 10vh;
-    height: 100vh;
-    margin-bottom: 0px;
-    padding: 0;
-    display: flex;
-}
-
-#faleConosco {
-    margin: 70px;
-    margin-top: 150px;
-    width: 50vw;
-}
-
-#faleSpace {
-    border-collapse: separate;
-    border-spacing: 20px 50px;
-}
-
-#faletext {
-    margin-top: 20px;
-    font-size: 100px;
-    font-weight: var(--font-title-weight);
-}
-
-#socialText {
-    font-size: 50px;
-    font-weight: var(--font-title-weight);
-    margin: 1vh 0 1vh 0;
-}
-
-#formCont {
-    margin: 10vh 5vw 0 0;
-    width: 40vw;
-    height: 80%;
-    backdrop-filter: blur(250px);
-    background-color: #110E27;
-    border-radius: 25px;
-    border: #DE574D 5px solid;
-}
-
-#align {
-    margin: 10%;
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-}
-
-#nome {
-    height: 72px;
-    margin-bottom: 5%;
-}
-
-#email {
-    height: 72px;
-    margin-bottom: 5%;
-}
-
-#mensagem {
-    height: 312px;
-    vertical-align: top;
-    resize: none;
-    padding-top: 10px;
-}
-
-
-#buttonStyle {
-    background-color: #DE574D;
-    height: 40px;
-    width: 201px;
-    border: none;
-    border-radius: 15px;
-    font-size: 20px;
-    align-self: self-end;
-    margin-top: 8%;
-}
-
-/*footer*/
-
-/*Header classes*/
-.rightSideText {
-    height: auto;
-    margin-left: auto;
-}
-
-.rightSideText>p {
-    font-size: 30px;
-    margin-right: 45px;
-}
-
-/*Header classes*/
-
-/*home classes*/
-.topBackground {
     width: 100%;
-    height: 100vh;
-    background-image: url(../img/FundoPrincipal.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
-.gameInfo {
-    position: relative;
-    top: 58vh;
-    margin-left: 5%;
-    max-width: 50%;
-}
-
-/*home classes*/
-
-/*mvv classes*/
-.MVVBackground {
-    position: relative;
-    width: 100%;
-    height: 110vh;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.MVVTitle {
-    background-color: var(--bg-color-box);
-    font-size: 40px;
-    margin-left: 2%;
-    margin-right: 2%;
-    max-width: 25%;
-    height: 420px;
-    font-weight: var(--font-title-weight);
-
-    border-radius: 25px;
-    border: 2px solid;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;    
-    align-items: center;
-}
-
-.MVVTitle p {
-    margin-top: 20px;
-}
-
-.MVVType {
-    font-size: 2.5vw;
-    font-weight: var(--font-title-weight);
-    font-family: "Libre Baskerville", serif;
-}
-
-.MVVDescription {
-    font-size: 30px;
-    font-family: Montserrat, serif;
-    font-weight: 200;
-    width: 70%;
-    text-align: justify;
-    hyphens: auto;
-}
-
-/*mvv classes*/
-
-.headerText {
-    display: inline;
-    text-decoration: none;
-    font-size: 35px;
-    padding-right: 35px;
-
-}
-
-
-/*lançamentos classes*/
 .areaLancamentos {
     position: relative;
-    min-height: 110vh;
+    width: 100vw;
+    max-width: 100vw;
+    min-height: 120vh;
+    height: auto;
     overflow: hidden;
+}
+
+.nomeLanc {
+    font-size: 40px;
+    margin: 20px;
 }
 
 .lancamentosImagens {
@@ -441,42 +382,135 @@ hr {
     position: absolute;
 }
 
-/*lançamentos classes*/
+/*Area lancamentos*/
 
-.titulo {
-    font-size: 80px;
-    font-weight: var(--font-title-weight);
+
+
+
+/*membros*/
+#equipe {
+    margin: 70px;
+    min-height: 100vh;
 }
 
-/*membros classes*/
+#lista {
+    display: grid;
+    margin-top: 8vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15vh;
+}
+
 .membros {
     display: grid;
     justify-items: center;
 }
 
 .imgMembro {
-
     width: 186px;
     height: 249px;
 }
 
 .nome {
-    font-size: 40px;
+
+    font-size: 2vw;
     font-weight: var(--font-title-weight);
     text-align: center;
 }
 
-/*membros classes*/
+/*membros*/
 
-/*footer classes*/
+/*footer*/
+#footer {
+    /* margin-top: 10vh; */
+    height: 100vh;
+    margin-bottom: 0px;
+    padding-top: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+#faleConosco {
+    margin: 70px;
+    margin-top: 100px;
+    width: 50vw;
+}
+
+#faleSpace {
+    border-collapse: separate;
+    border-spacing: 1.5vw 4vh;
+}
+
+#faletext {
+    margin-top: 30px;
+    font-size: 5vw;
+    font-weight: var(--font-title-weight);
+    width: 20vw;
+}
+
+#socialText {
+    font-size: 3vw;
+    font-weight: var(--font-title-weight);
+    margin: 1vh 0 1vh 0;
+}
+
+#formCont {
+    margin: 2vh 5vw;
+    width: 40vw;
+    height: auto;
+    backdrop-filter: blur(250px);
+    background-color: #110E27;
+    border-radius: 25px;
+    border: #DE574D 5px solid;
+}
+
+#align {
+    margin: 10%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+#nome {
+    height: 7vh;
+    margin: 5% 0;
+}
+
+#email {
+    height: 7vh;
+    margin: 5% 0;
+}
+
+#mensagem {
+    height: 30vh;
+    vertical-align: top;
+    resize: none;
+    padding-top: 10px;
+    margin: 5% 0;
+}
+
+
+#buttonStyle {
+    background-color: #DE574D;
+    height: 3.5vh;
+    width: 40%;
+    border: none;
+    border-radius: 15px;
+    font-size: x-large;
+    align-self: self-end;
+    margin-top: 8%;
+    display: block;
+}
+
 .subtitle {
-    font-size: 25px;
+    font-size: 1.5vw;
     font-weight: 500;
     margin-top: 5%;
 }
 
 .description {
-    font-size: 20px;
+    font-size: 1vw;
 }
 
 .iconFale {
@@ -487,22 +521,414 @@ hr {
 
 .icon {
     margin: 2% 4%;
-    width: 61px;
-    height: 61px;
+    width: 51px;
+    height: 51px;
 }
 
 .textForm {
-    font-size: 30px;
+    font-size: 1.5vw;
     font-weight: 300;
 }
 
 .boxStyle {
     background-color: #232036;
+
     border: none;
     border-radius: 25px;
-    font-size: 25px;
+    font-size: 1.5vw;
     font-weight: var(--font-title-weight);
     padding: 0 20px;
 }
 
-/*footer classes*/
+/*footer*/
+
+
+
+.titulo {
+    font-size: 5vw;
+    font-weight: var(--font-title-weight);
+    width: 50vw;
+}
+
+
+@media screen and (max-width: 980px) {
+    hr {
+        width: 100%;
+    }
+
+    /* header */
+
+    .header {
+        position: fixed;
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #businessName {
+        font-size: 2rem;
+
+    }
+
+    #menu-line {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .headerText {
+        font-size: 4vw;
+        margin: 25px;
+    }
+
+    .rightSideText {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        width: 100%;
+        transform: translateY(-150%);
+        transition: transform 0.5s ease-in;
+    }
+
+
+    .linha {
+        height: 3px;
+        width: 40px;
+        background-color: white;
+    }
+
+    .menu {
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        padding: 20px;
+    }
+
+    /* header */
+
+
+
+    /* home */
+
+    #colorOverlay {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    #gameName {
+        font-size: 6vw;
+        margin-bottom: 4%;
+        font-family: "Libre Baskerville", serif;
+        font-weight: var(--font-title-weight);
+    }
+
+    #gameDesc {
+        display: none;
+    }
+
+    .gameInfo {
+        position: relative;
+        top: 60%;
+        margin-left: 5%;
+        max-width: 80%;
+    }
+
+    /* home */
+
+
+    /* MVV */
+
+    #mission {
+        border-color: var(--bg-orange);
+    }
+
+    #vision {
+        border-color: var(--bg-purple);
+    }
+
+    #values {
+        border-color: var(--bg-blue);
+    }
+
+    #slogan {
+        position: relative;
+        top: 100px;
+        font-size: x-large;
+        font-weight: var(--font-title-weight);
+    }
+
+    #MVVSection {
+        position: relative;
+        top: 20vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: none;
+        align-items: center;
+        gap: 25px;
+        justify-content: space-between;
+    }
+
+    .MVVBackground {
+        position: relative;
+        width: 100%;
+        min-height: 152vh;
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .MVVTitle {
+        font-size: 2vw;
+        margin-left: 2%;
+        margin-right: 2%;
+        min-width: 80%;
+        height: 35vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .MVVTitle p {
+        margin-top: 20px;
+    }
+
+    .MVVType {
+        font-size: x-large;
+    }
+
+    .MVVDescription {
+        font-size: 20px;
+        font-family: Montserrat, serif;
+        font-weight: 200;
+        width: 70%;
+        text-align: justify;
+        hyphens: auto;
+        overflow-wrap: break-word;
+    }
+
+    #line {
+        display: none;
+    }
+
+    #line2 {
+        display: none;
+    }
+
+    /* MVV */
+
+    /* Lançamentos */
+
+
+    #fundo {
+        position: absolute;
+        min-height: auto;
+        width: 100vw;
+        padding: 18px;
+        /* padding-right: 0; */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 50px;
+        /* align-items: center; */
+    }
+
+    #descricaoLancamentos {
+        font-size: medium;
+        text-align: justify;
+        hyphens: auto;
+    }
+
+    #secaoImagens {
+        display: flex;
+        justify-content: stretch;
+        align-items: center;
+        width: 90%;
+        height: 100%;
+        /* gap:1px; */
+    }
+
+    .align-center {
+        text-align: center;
+        width: 90%;
+
+    }
+
+    .nomeLanc {
+        font-size: 25px
+    }
+
+    #textoLancamentos {
+        padding-top: 40px;
+        width: 100%;
+    }
+
+
+    #img-align {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 120%;
+        gap: 10px;
+    }
+
+    #img1 {
+        width: 60%;
+    }
+
+    #img2,
+    #img3 {
+        width: 100%;
+    }
+
+    #imgContainer {
+        width: 40%;
+    }
+
+    .areaLancamentos {
+        width: 100vw;
+        min-height: 1750px;
+    }
+
+    /* Lançamentos */
+
+    /* membros */
+    #equipe {
+        margin: 20px;
+    }
+
+    #lista {
+        display: grid;
+        margin-top: 8vh;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 100px;
+    }
+
+    .imgMembro {
+        width: 90px;
+        height: 130px;
+    }
+
+    .nome {
+        margin: 10px 0;
+        font-size: 25px;
+        font-weight: var(--font-title-weight);
+        text-align: center;
+    }
+
+    /* membros */
+
+    /* footer */
+
+    #footer {
+        max-width: 100vw;
+        height: auto;
+        margin-bottom: 0px;
+        padding-top: 10vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* flex-wrap: wrap; */
+    }
+
+    #faleConosco {
+        margin: 5px;
+        margin-top: 100px;
+        width: 80%;
+    }
+
+    #faletext {
+        margin-top: 30px;
+        font-size: 8vw;
+        font-weight: var(--font-title-weight);
+        width: 100%;
+    }
+
+    #formCont {
+        width: 80%;
+        height: auto;
+        backdrop-filter: blur(250px);
+        background-color: #110E27;
+        border-radius: 25px;
+        border: #DE574D 5px solid;
+    }
+
+    #socialText {
+        font-size: medium;
+    }
+
+    .subtitle {
+        font-size: small;
+    }
+
+    .description {
+        font-size: smaller;
+    }
+
+    .iconFale {
+        height: 52px;
+        width: 52px;
+    }
+
+    .icon {
+        height: 12vw;
+        width: 12vw;
+    }
+
+    .textForm {
+        font-size: medium;
+    }
+
+    .boxStyle {
+        font-size: medium;
+    }
+
+    #buttonStyle {
+        font-size: medium;
+    }
+
+    /* footer */
+
+    .titulo {
+        font-size: 30px;
+    }
+}
+
+.header.roll {
+    background-color: var(--bg-color-box);
+    margin-top: 0;
+    border-radius: 0;
+    min-height: 10vh;
+    /* height: 10vh; */
+    width: 100vw;
+}
+
+.rightSideText.active {
+    display: flex;
+    transform: translateY(0);
+    animation: rightSideTextSlide 0.3s ease-in;
+}
+
+.headerText.active {
+    padding: 0 100%;
+}
+
+@keyframes rightSideTextSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
