@@ -54,8 +54,8 @@ section[id] {
     scroll-margin-top: 10vh;
 }
 
-#lancamentos{
-    scroll-margin-top:10vh;
+#lancamentos {
+    scroll-margin-top: 10vh;
 }
 
 /*Header*/
@@ -323,21 +323,27 @@ section[id] {
 #img1 {
     width: 25vw;
     height: 50vh;
+    background-image: url(/img/FundoPrincipal.jpg);
+
 }
 
 #img2 {
     width: auto;
     height: 24vh;
+    background-image: url(/img/fotocarro.jpeg);
 }
 
 #img3 {
     width: auto;
     height: 24vh;
+    background-image: url(/img/fotopredio.jpeg);
 }
 
 #img4 {
     width: 100%;
     height: 40vh;
+    background-image: url(/img/fotoprediocarro.jpeg);
+
 }
 
 #imgContainer {
@@ -351,6 +357,8 @@ section[id] {
 #img-align {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    gap: 12px;
     width: 100%;
 }
 
@@ -372,6 +380,8 @@ section[id] {
     background-color: var(--bg-color-box);
     border-radius: 25px;
     border: 2px solid;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .circle {
