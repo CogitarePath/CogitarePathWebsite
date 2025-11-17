@@ -323,8 +323,7 @@ section[id] {
 #img1 {
     width: 25vw;
     height: 50vh;
-    background-image: url(/img/FundoPrincipal.jpg);
-
+    background-image: url(/img/fotoprediocarro.jpeg);
 }
 
 #img2 {
@@ -342,8 +341,7 @@ section[id] {
 #img4 {
     width: 100%;
     height: 40vh;
-    background-image: url(/img/fotoprediocarro.jpeg);
-
+    background-image: url(/img/LogoAgiro.jpeg);
 }
 
 #imgContainer {
@@ -382,6 +380,7 @@ section[id] {
     border: 2px solid;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .circle {
@@ -418,6 +417,7 @@ section[id] {
 .imgMembro {
     width: 186px;
     height: 249px;
+    border-radius:  100%;
 }
 
 .nome {
